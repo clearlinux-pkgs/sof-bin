@@ -4,7 +4,7 @@
 #
 Name     : sof-bin
 Version  : 6c721969e200706db06ab468c5207384ab339739
-Release  : 2
+Release  : 3
 URL      : https://github.com/thesofproject/sof-bin/archive/6c721969e200706db06ab468c5207384ab339739.tar.gz
 Source0  : https://github.com/thesofproject/sof-bin/archive/6c721969e200706db06ab468c5207384ab339739.tar.gz
 Summary  : No detailed summary available
@@ -37,7 +37,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583471813
+export SOURCE_DATE_EPOCH=1583472209
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -50,7 +50,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1583471813
+export SOURCE_DATE_EPOCH=1583472209
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sof-bin
 cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %{buildroot}/usr/share/package-licenses/sof-bin/b052da06a67e96a1d3ca22f4630bf7956ea88d5a
@@ -58,15 +58,7 @@ cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %
 
 %files
 %defattr(-,root,root,-)
-/lib/firmware/intel/sof-apl.ri
-/lib/firmware/intel/sof-bdw.ri
-/lib/firmware/intel/sof-byt.ri
-/lib/firmware/intel/sof-cfl.ri
-/lib/firmware/intel/sof-cht.ri
-/lib/firmware/intel/sof-cml.ri
-/lib/firmware/intel/sof-cnl.ri
-/lib/firmware/intel/sof-glk.ri
-/lib/firmware/intel/sof-icl.ri
+/lib/firmware/intel/sof-tplg
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-da7219.tplg
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-demux-pcm512x.tplg
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-2ch.tplg
@@ -135,6 +127,15 @@ cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-demux-rt5682.tplg
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-rt5682-kwd.tplg
 /lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-rt5682.tplg
+/lib/firmware/intel/sof/sof-apl.ri
+/lib/firmware/intel/sof/sof-bdw.ri
+/lib/firmware/intel/sof/sof-byt.ri
+/lib/firmware/intel/sof/sof-cfl.ri
+/lib/firmware/intel/sof/sof-cht.ri
+/lib/firmware/intel/sof/sof-cml.ri
+/lib/firmware/intel/sof/sof-cnl.ri
+/lib/firmware/intel/sof/sof-glk.ri
+/lib/firmware/intel/sof/sof-icl.ri
 /lib/firmware/intel/sof/v1.4.2/intel-signed/sof-apl-v1.4.2.ri
 /lib/firmware/intel/sof/v1.4.2/intel-signed/sof-cnl-v1.4.2.ri
 /lib/firmware/intel/sof/v1.4.2/intel-signed/sof-icl-v1.4.2.ri
@@ -150,7 +151,6 @@ cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %
 /lib/firmware/intel/sof/v1.4.2/sof-cht-v1.4.2.ri
 /lib/firmware/intel/sof/v1.4.2/sof-cnl-v1.4.2.ldc
 /lib/firmware/intel/sof/v1.4.2/sof-icl-v1.4.2.ldc
-/lib/firmware/sof-tplg
 
 %files license
 %defattr(0644,root,root,0755)

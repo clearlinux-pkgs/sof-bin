@@ -1,22 +1,22 @@
-From 05939225d70b8a4a087974ae9aa82ee0d4f32bf3 Mon Sep 17 00:00:00 2001
+From 40c5568a182148e69ce1cada4f630cc9579e522d Mon Sep 17 00:00:00 2001
 From: Auke Kok <auke-jan.h.kok@intel.com>
 Date: Thu, 5 Mar 2020 14:27:31 -0800
 Subject: [PATCH] Convert `go.sh` script into a classic `Makefile` with DESTDIR
  support.
 
 ---
- Makefile | 33 +++++++++++++++++++++++++++++++++
+ Makefile | 35 +++++++++++++++++++++++++++++++++++
  go.sh    | 55 -------------------------------------------------------
- 2 files changed, 33 insertions(+), 55 deletions(-)
+ 2 files changed, 35 insertions(+), 55 deletions(-)
  create mode 100755 Makefile
  delete mode 100755 go.sh
 
 diff --git a/Makefile b/Makefile
 new file mode 100755
-index 0000000..3bde7c5
+index 0000000..1b2f8a9
 --- /dev/null
 +++ b/Makefile
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,35 @@
 +
 +#
 +# This script installs the firmware files in the place where the linux
@@ -37,18 +37,20 @@ index 0000000..3bde7c5
 +	mkdir -p $(FIRMWAREDIR)
 +	cp -rf lib/firmware/intel $(FIRMWAREDIR)/
 +
-+	ln -s $(VERSION)/sof-bdw-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-bdw.ri
-+	ln -s $(VERSION)/sof-byt-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-byt.ri
-+	ln -s $(VERSION)/sof-cht-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-cht.ri
++	mkdir -p $(FIRMWAREDIR)/sof
 +
-+	ln -s $(VERSION)/intel-signed/sof-apl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-apl.ri
-+	ln -s $(VERSION)/intel-signed/sof-apl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-glk.ri
-+	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-cfl.ri
-+	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-cnl.ri
-+	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-cml.ri
-+	ln -s $(VERSION)/intel-signed/sof-icl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof-icl.ri
++	ln -s $(VERSION)/sof-bdw-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-bdw.ri
++	ln -s $(VERSION)/sof-byt-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-byt.ri
++	ln -s $(VERSION)/sof-cht-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-cht.ri
 +
-+	ln -s sof-tplg-$(VERSION) $(FIRMWAREDIR)/sof-tplg
++	ln -s $(VERSION)/intel-signed/sof-apl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-apl.ri
++	ln -s $(VERSION)/intel-signed/sof-apl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-glk.ri
++	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-cfl.ri
++	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-cnl.ri
++	ln -s $(VERSION)/intel-signed/sof-cnl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-cml.ri
++	ln -s $(VERSION)/intel-signed/sof-icl-$(VERSION).ri $(FIRMWAREDIR)/intel/sof/sof-icl.ri
++
++	ln -s sof-tplg-$(VERSION) $(FIRMWAREDIR)/intel/sof-tplg
 +
 diff --git a/go.sh b/go.sh
 deleted file mode 100755

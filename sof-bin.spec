@@ -4,7 +4,7 @@
 #
 Name     : sof-bin
 Version  : 6c721969e200706db06ab468c5207384ab339739
-Release  : 1
+Release  : 2
 URL      : https://github.com/thesofproject/sof-bin/archive/6c721969e200706db06ab468c5207384ab339739.tar.gz
 Source0  : https://github.com/thesofproject/sof-bin/archive/6c721969e200706db06ab468c5207384ab339739.tar.gz
 Summary  : No detailed summary available
@@ -37,7 +37,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583447603
+export SOURCE_DATE_EPOCH=1583471813
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -50,7 +50,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1583447603
+export SOURCE_DATE_EPOCH=1583471813
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sof-bin
 cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %{buildroot}/usr/share/package-licenses/sof-bin/b052da06a67e96a1d3ca22f4630bf7956ea88d5a
@@ -58,99 +58,99 @@ cp %{_builddir}/sof-bin-6c721969e200706db06ab468c5207384ab339739/LICENCE.Intel %
 
 %files
 %defattr(-,root,root,-)
-/lib/firmware/intel/intel/sof-apl.ri
-/lib/firmware/intel/intel/sof-bdw.ri
-/lib/firmware/intel/intel/sof-byt.ri
-/lib/firmware/intel/intel/sof-cfl.ri
-/lib/firmware/intel/intel/sof-cht.ri
-/lib/firmware/intel/intel/sof-cml.ri
-/lib/firmware/intel/intel/sof-cnl.ri
-/lib/firmware/intel/intel/sof-glk.ri
-/lib/firmware/intel/intel/sof-icl.ri
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-da7219.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-demux-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-4ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch-b2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch-b4ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-a4ch-b2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-dmic-b2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-eq-dmic.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-eq-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-keyword-detect.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-pcm512x-nohdmi.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-rt298.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-src-50khz-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-src-dmic.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-src-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-tdf8532.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-apl-wm8804.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-bdw-rt286.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-bdw-rt5640.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-da7213.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-rt5640.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-rt5645.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-rt5651.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-byt-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cht-max98090.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cht-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cht-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cht-src-50khz-pcm512x.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-demux-rt5682-max98357a.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-demux-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt1011-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt5682-kwd.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt5682-max98357a.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt700.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt711-rt1308-mono-rt715.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-rt711-rt1308-rt715.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cml-src-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cnl-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-cnl-rt274.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-glk-da7219-kwd.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-glk-da7219.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-glk-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic-2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic-4ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp-2ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp-4ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hda-generic.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-hsw-rt5640.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-dmic-4ch.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-rt5682-kwd.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-rt700.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-rt711-rt1308-rt715-hdmi.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-icl-rt711-rt1308-rt715.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-tgl-nocodec.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-tgl-rt711-rt1308-nohdmi.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-tgl-rt711-rt1308.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-whl-demux-rt5682.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-whl-rt5682-kwd.tplg
-/lib/firmware/intel/intel/sof-tplg-v1.4.2/sof-whl-rt5682.tplg
-/lib/firmware/intel/intel/sof/v1.4.2/intel-signed/sof-apl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/intel-signed/sof-cnl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/intel-signed/sof-icl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/public-signed/sof-apl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/public-signed/sof-cnl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/public-signed/sof-icl-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/sof-apl-v1.4.2.ldc
-/lib/firmware/intel/intel/sof/v1.4.2/sof-bdw-v1.4.2.ldc
-/lib/firmware/intel/intel/sof/v1.4.2/sof-bdw-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/sof-byt-v1.4.2.ldc
-/lib/firmware/intel/intel/sof/v1.4.2/sof-byt-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/sof-cht-v1.4.2.ldc
-/lib/firmware/intel/intel/sof/v1.4.2/sof-cht-v1.4.2.ri
-/lib/firmware/intel/intel/sof/v1.4.2/sof-cnl-v1.4.2.ldc
-/lib/firmware/intel/intel/sof/v1.4.2/sof-icl-v1.4.2.ldc
-/lib/firmware/intel/sof-tplg
+/lib/firmware/intel/sof-apl.ri
+/lib/firmware/intel/sof-bdw.ri
+/lib/firmware/intel/sof-byt.ri
+/lib/firmware/intel/sof-cfl.ri
+/lib/firmware/intel/sof-cht.ri
+/lib/firmware/intel/sof-cml.ri
+/lib/firmware/intel/sof-cnl.ri
+/lib/firmware/intel/sof-glk.ri
+/lib/firmware/intel/sof-icl.ri
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-da7219.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-demux-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-4ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch-b2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch-b4ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-a2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-a4ch-b2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-dmic-b2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-eq-dmic.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-eq-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-keyword-detect.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-pcm512x-nohdmi.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-rt298.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-src-50khz-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-src-dmic.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-src-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-tdf8532.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-apl-wm8804.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-bdw-rt286.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-bdw-rt5640.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-da7213.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-rt5640.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-rt5645.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-rt5651.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-byt-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cht-max98090.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cht-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cht-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cht-src-50khz-pcm512x.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-demux-rt5682-max98357a.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-demux-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt1011-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt5682-kwd.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt5682-max98357a.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt700.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt711-rt1308-mono-rt715.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-rt711-rt1308-rt715.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cml-src-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cnl-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-cnl-rt274.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-glk-da7219-kwd.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-glk-da7219.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-glk-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic-2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic-4ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp-2ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp-4ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic-idisp.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hda-generic.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-hsw-rt5640.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-dmic-4ch.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-rt5682-kwd.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-rt700.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-rt711-rt1308-rt715-hdmi.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-icl-rt711-rt1308-rt715.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-tgl-nocodec.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-tgl-rt711-rt1308-nohdmi.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-tgl-rt711-rt1308.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-demux-rt5682.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-rt5682-kwd.tplg
+/lib/firmware/intel/sof-tplg-v1.4.2/sof-whl-rt5682.tplg
+/lib/firmware/intel/sof/v1.4.2/intel-signed/sof-apl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/intel-signed/sof-cnl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/intel-signed/sof-icl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/public-signed/sof-apl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/public-signed/sof-cnl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/public-signed/sof-icl-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/sof-apl-v1.4.2.ldc
+/lib/firmware/intel/sof/v1.4.2/sof-bdw-v1.4.2.ldc
+/lib/firmware/intel/sof/v1.4.2/sof-bdw-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/sof-byt-v1.4.2.ldc
+/lib/firmware/intel/sof/v1.4.2/sof-byt-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/sof-cht-v1.4.2.ldc
+/lib/firmware/intel/sof/v1.4.2/sof-cht-v1.4.2.ri
+/lib/firmware/intel/sof/v1.4.2/sof-cnl-v1.4.2.ldc
+/lib/firmware/intel/sof/v1.4.2/sof-icl-v1.4.2.ldc
+/lib/firmware/sof-tplg
 
 %files license
 %defattr(0644,root,root,0755)

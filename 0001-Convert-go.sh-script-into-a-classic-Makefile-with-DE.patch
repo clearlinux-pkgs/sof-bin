@@ -27,7 +27,7 @@ index 0000000..3bde7c5
 +
 +VERSION ?= v1.4.2
 +
-+FIRMWAREDIR ?= $(DESTDIR)/lib/firmware/intel
++FIRMWAREDIR ?= $(DESTDIR)/lib/firmware
 +
 +all:
 +

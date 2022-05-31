@@ -10,16 +10,16 @@ procedure.
 
 Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
 ---
- Makefile | 27 +++++++++++++++++++++++++++
- 1 file changed, 27 insertions(+)
+ Makefile | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
  create mode 100644 Makefile
 
 diff --git a/Makefile b/Makefile
 new file mode 100644
-index 0000000..ec95a1a
+index 0000000..ef6123a
 --- /dev/null
 +++ b/Makefile
-@@ -0,0 +1,27 @@
+@@ -0,0 +1,29 @@
 +#
 +# This makefile installs the firmware files to the place where the linux
 +# firmware loading system expects them, `/usr/lib/firmware`. It supports
@@ -31,6 +31,8 @@ index 0000000..ec95a1a
 +$(error SOF_VERSION must be defined in the environment or on the command line)
 +endif
 +
++SOF_MAJMIN_VERSION = $(shell echo ${SOF_VERSION} | cut -d. -f1-2)
++
 +FIRMWAREDIR ?= /usr/lib/firmware
 +
 +all:
@@ -40,8 +42,8 @@ index 0000000..ec95a1a
 +# v1.8 changes the tree structure, so support versions < v1.8 as well
 +install:
 +	TOPDIR=""; \
-+	if [ -d v$(SOF_VERSION).x ]; then \
-+		TOPDIR="v$(SOF_VERSION).x/"; \
++	if [ -d v$(SOF_MAJMIN_VERSION).x ]; then \
++		TOPDIR="v$(SOF_MAJMIN_VERSION).x/"; \
 +	fi; \
 +	for DIR in sof sof-tplg; do \
 +		mkdir -pv $(DESTDIR)/$(FIRMWAREDIR)/intel; \

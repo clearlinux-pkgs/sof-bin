@@ -16,7 +16,7 @@ Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
 
 diff --git a/Makefile b/Makefile
 new file mode 100644
-index 0000000..ef6123a
+index 0000000..0526081
 --- /dev/null
 +++ b/Makefile
 @@ -0,0 +1,29 @@
@@ -46,6 +46,6 @@ index 0000000..ef6123a
 +		TOPDIR="v$(SOF_MAJMIN_VERSION).x/"; \
 +	fi; \
 +	for DIR in sof sof-tplg; do \
-+		mkdir -pv $(DESTDIR)/$(FIRMWAREDIR)/intel; \
-+		cp -av $${TOPDIR}$$DIR-v$(SOF_VERSION) $(DESTDIR)/$(FIRMWAREDIR)/intel/$$DIR; \
++		mkdir -pv $(DESTDIR)/$(FIRMWAREDIR)/intel/$$DIR; \
++		cp -av $${TOPDIR}$$DIR/* $(DESTDIR)/$(FIRMWAREDIR)/intel/$$DIR/; \
 +	done

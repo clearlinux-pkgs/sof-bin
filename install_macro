@@ -1,0 +1,1 @@
+mkdir -p %{buildroot}/usr/lib/firmware/intel && FW_DEST=%{buildroot}/usr/lib/firmware/intel TOOLS_DEST=%{buildroot}/usr/bin ./install.sh v%{version}

@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : sof-bin
-Version  : 2023.09
-Release  : 12
-URL      : https://github.com/thesofproject/sof-bin/releases/download/v2023.09/sof-bin-2023.09.tar.gz
-Source0  : https://github.com/thesofproject/sof-bin/releases/download/v2023.09/sof-bin-2023.09.tar.gz
+Version  : 2023.09.1
+Release  : 13
+URL      : https://github.com/thesofproject/sof-bin/releases/download/v2023.09.1/sof-bin-2023.09.1.tar.gz
+Source0  : https://github.com/thesofproject/sof-bin/releases/download/v2023.09.1/sof-bin-2023.09.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -46,15 +46,15 @@ license components for the sof-bin package.
 
 
 %prep
-%setup -q -n sof-bin-2023.09
-cd %{_builddir}/sof-bin-2023.09
+%setup -q -n sof-bin-2023.09.1
+cd %{_builddir}/sof-bin-2023.09.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1699314123
+export SOURCE_DATE_EPOCH=1699314313
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,7 +87,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1699314123
+export SOURCE_DATE_EPOCH=1699314313
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sof-bin
 cp %{_builddir}/sof-bin-%{version}/LICENCE.Intel %{buildroot}/usr/share/package-licenses/sof-bin/b052da06a67e96a1d3ca22f4630bf7956ea88d5a || :
